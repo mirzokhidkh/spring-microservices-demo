@@ -1,19 +1,18 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
-    name: customer
+    name: fraud
   datasource:
     username: postgres
-    url: jdbc:postgresql://localhost:5432/customer
+    url: jdbc:postgresql://localhost:5432/fraud
     password: 1212
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
-
