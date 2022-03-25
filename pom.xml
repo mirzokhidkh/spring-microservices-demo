@@ -11,6 +11,8 @@
     <modules>
         <module>customer</module>
         <module>fraud</module>
+        <module>eureka-server</module>
+        <module>clients</module>
     </modules>
 
     <name>spring-microservices-demo</name>
@@ -23,15 +25,22 @@
         <maven.compiler.target>17</maven.compiler.target>
         <spring.boot.maven.plugin.version>2.6.4</spring.boot.maven.plugin.version>
         <spring.boot.maven.dependencies.version>2.6.4</spring.boot.maven.dependencies.version>
+        <spring.cloud-version>2021.0.1</spring.cloud-version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.boot.maven.dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -46,6 +55,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 
