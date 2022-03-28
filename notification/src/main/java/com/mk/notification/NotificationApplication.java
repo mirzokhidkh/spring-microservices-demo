@@ -1,4 +1,4 @@
-package com.mk.customer;
+package com.mk.notification;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,13 +7,18 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
-@SpringBootApplication
+@SpringBootApplication(
+        scanBasePackages = {
+                "com.mk.notification"
+        }
+)
 @EnableEurekaClient
 @EnableFeignClients(
         basePackages = "com.mk.clients"
 )
-public class CustomerApplication {
+public class NotificationApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CustomerApplication.class, args);
+        SpringApplication.run(NotificationApplication.class, args);
     }
+
 }
