@@ -116,7 +116,6 @@ networks:
   spring:
     driver: bridge
 
-
 volumes:
   postgres:
   pgadmin:
