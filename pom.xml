@@ -84,10 +84,14 @@
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
                     <artifactId>jib-maven-plugin</artifactId>
-                    <version>3.2.1</version>
+                    <version>3.2.0</version>
                     <configuration>
                         <from>
                             <image>eclipse-temurin:17@sha256:2b47a8ea946ce1e5365a1562414ed576e378b7b670cadff3fb98ebecf2890cdc</image> <!--@sha256:2b47a8ea946ce1e5365a1562414ed576e378b7b670cadff3fb98ebecf2890cdc -->
+<!--                            <auth>-->
+<!--                                <username>mirzokhidkh</username>-->
+<!--                                <password>Lc4)*FF+NNa8^$2</password>-->
+<!--                            </auth>-->
                             <platforms>
                                 <platform>
                                     <architecture>arm64</architecture>
