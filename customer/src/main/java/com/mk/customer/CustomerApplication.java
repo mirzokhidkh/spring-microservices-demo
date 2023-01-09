@@ -2,6 +2,8 @@ package com.mk.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 //import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 //import org.springframework.cloud.openfeign.EnableFeignClients;
 //import org.springframework.context.annotation.PropertySource;
@@ -14,10 +16,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //                "com.mk.amqp"
 //        }
 //)
-//@EnableEurekaClient
-//@EnableFeignClients(
-//        basePackages = "com.mk.clients"
-//)
+@EnableEurekaClient
+@EnableFeignClients(
+        basePackages = "com.mk.clients"
+)
 //@PropertySources({
 //        @PropertySource("classpath:clients-${spring.profiles.active}.properties")
 //})

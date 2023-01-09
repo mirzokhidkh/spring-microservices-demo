@@ -7,6 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="notification" />
+        <module name="clients" />
+        <module name="eureka-server" />
         <module name="fraud" />
         <module name="customer" />
       </profile>
@@ -14,10 +17,7 @@
     <bytecodeTargetLevel>
       <module name="amqp" target="17" />
       <module name="apigw" target="17" />
-      <module name="clients" target="17" />
       <module name="demo" target="17" />
-      <module name="eureka-server" target="17" />
-      <module name="notification" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
