@@ -11,6 +11,11 @@
     <packaging>jar</packaging>
     <artifactId>apigw</artifactId>
 
+<!--    <properties>-->
+<!--        <maven.compiler.source>17</maven.compiler.source>-->
+<!--        <maven.compiler.target>17</maven.compiler.target>-->
+<!--    </properties>-->
+
     <build>
         <plugins>
             <plugin>
@@ -19,7 +24,6 @@
             </plugin>
         </plugins>
     </build>
-
 <!--    <profiles>-->
 <!--        <profile>-->
 <!--            <id>build-docker-image</id>-->

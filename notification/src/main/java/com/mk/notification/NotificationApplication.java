@@ -1,6 +1,7 @@
 package com.mk.notification;
 
 //import com.mk.amqp.RabbitMQMessageProducer;
+import com.mk.amqp.RabbitMQMessageProducer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,13 +11,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
-@SpringBootApplication
-//@SpringBootApplication(
-//        scanBasePackages = {
-//                "com.mk.notification",
-//                "com.mk.amqp"
-//        }
-//)
+@SpringBootApplication(
+        scanBasePackages = {
+                "com.mk.notification",
+                "com.mk.amqp"
+        }
+)
 //@PropertySources({
 //        @PropertySource("classpath:clients-${spring.profiles.active}.properties")
 //})
@@ -25,7 +25,7 @@ public class NotificationApplication {
         SpringApplication.run(NotificationApplication.class, args);
     }
 
-//
+
 //    @Bean
 //    CommandLineRunner commandLineRunner(
 //            RabbitMQMessageProducer producer,
@@ -41,6 +41,6 @@ public class NotificationApplication {
 //
 //    record Person(String name, int age) {
 //    }
-//
+
 
 }

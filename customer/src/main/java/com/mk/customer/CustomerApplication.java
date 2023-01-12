@@ -9,13 +9,12 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 //import org.springframework.context.annotation.PropertySource;
 //import org.springframework.context.annotation.PropertySources;
 
-@SpringBootApplication
-//@SpringBootApplication(
-//        scanBasePackages = {
-//                "com.mk.customer",
-//                "com.mk.amqp"
-//        }
-//)
+@SpringBootApplication(
+        scanBasePackages = {
+                "com.mk.customer",
+                "com.mk.amqp"
+        }
+)
 @EnableEurekaClient
 @EnableFeignClients(
         basePackages = "com.mk.clients"

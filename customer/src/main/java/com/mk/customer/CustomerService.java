@@ -6,6 +6,7 @@ package com.mk.customer;
 //import com.mk.clients.notification.NotificationClient;
 //import com.mk.clients.notification.NotificationRequest;
 
+import com.mk.amqp.RabbitMQMessageProducer;
 import com.mk.clients.fraud.FraudCheckResponse;
 import com.mk.clients.fraud.FraudClient;
 import com.mk.clients.notification.NotificationClient;
@@ -18,11 +19,11 @@ import org.springframework.web.client.RestTemplate;
 @AllArgsConstructor
 public class CustomerService {
     private final CustomerRepository customerRepository;
-    private final NotificationClient notificationClient;
+//    private final NotificationClient notificationClient;
 //    private final RestTemplate restTemplate;
 
     private final FraudClient fraudClient;
-//    private final RabbitMQMessageProducer rabbitMQMessageProducer;
+    private final RabbitMQMessageProducer rabbitMQMessageProducer;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder().firstName(request.firstName()).lastName(request.lastName()).email(request.email()).build();
@@ -50,13 +51,13 @@ public class CustomerService {
                 String.format("Hi %s, welcome to MK...", customer.getFirstName())
         );
 
-        notificationClient.sendNotification(notificationRequest);
+//        notificationClient.sendNotification(notificationRequest);
 
-//        rabbitMQMessageProducer.publish(
-//                notificationRequest,
-//                "internal.exchange",
-//                "internal.notification.routing-key"
-//        );
+        rabbitMQMessageProducer.publish(
+                notificationRequest,
+                "internal.exchange",
+                "internal.notification.routing-key"
+        );
 
 
     }
