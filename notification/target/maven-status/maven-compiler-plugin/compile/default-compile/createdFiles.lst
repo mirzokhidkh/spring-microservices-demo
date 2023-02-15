@@ -1,8 +1,0 @@
-com\mk\notification\Notification$NotificationBuilder.class
-com\mk\notification\NotificationApplication.class
-com\mk\notification\NotificationService.class
-com\mk\notification\NotificationConfig.class
-com\mk\notification\rabbitmq\NotificationConsumer.class
-com\mk\notification\Notification.class
-com\mk\notification\NotificationRepository.class
-com\mk\notification\NotificationController.class

@@ -1,6 +1,0 @@
-com\mk\fraud\FraudController.class
-com\mk\fraud\FraudCheckHistoryRepository.class
-com\mk\fraud\FraudCheckHistory$FraudCheckHistoryBuilder.class
-com\mk\fraud\FraudCheckService.class
-com\mk\fraud\FraudApplication.class
-com\mk\fraud\FraudCheckHistory.class
